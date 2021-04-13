@@ -1,0 +1,22 @@
+﻿@{
+    @using TwoFactorAuth.ViewModel;
+    @model CellPhoneViewModel
+}
+<div>
+    <h2>
+
+        <li style="display: inline-block"> All Products are shown here</li>
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<li style="display: inline-block"><a class="nav-link" asp-area="" asp-controller="CellPhones" asp-action="Create"><img height="50px" width="50px" src="~/Images/Plus_symbol.svg.png" /></a></li>
+        &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<li style="display: inline-block "><a class="nav-link" asp-area="" asp-controller="Products" asp-action="Index">Go Back !</a></li>
+    </h2>
+
+</div>
+<div>
+
+</div>
+@{
+    foreach (var item in Model.CellPhones)
+    {
+        @Html.Partial("CellPhoneSummary", item)
+    }
+}

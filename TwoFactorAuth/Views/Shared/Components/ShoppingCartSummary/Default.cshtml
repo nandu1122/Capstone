@@ -1,0 +1,16 @@
+﻿@{
+    @using TwoFactorAuth.ViewModel;
+    @model ShoppingCartViewModel
+}
+<link rel="stylesheet" href="~/css/site.css" />
+@if (Model.ShoppingCart.ShoppingCartItems.Count > 0)
+{
+    <li>
+        <a asp-controller="ShoppingCart">
+            <span class=" glyphicon glyphicon-shopping-cart"><img src="~/Images/shopping-cart-icon-png-favpng-e5DiMUYLNYaTjdsibphFUCAxC.jpg" height="20px" width="20px" /> :</span>
+            <span id="cart-status">
+                @Model.ShoppingCart.ShoppingCartItems.Count
+            </span>
+        </a>
+    </li>
+}

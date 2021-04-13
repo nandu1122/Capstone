@@ -1,0 +1,27 @@
+﻿@{
+    @using TwoFactorAuth.ViewModel;
+    @model ItemViewModel
+}
+<div >
+    <h3>
+        <ul>
+
+            <li   style="display: inline-block"> All Products are shown here</li>
+           <li   style="display: inline-block"><a class="nav-link" asp-area="" asp-controller="CellPhones" asp-action="Index">CellPhones</a></li>
+             <li  style="display: inline-block"><a style="text-decoration: underline" asp-action="Create">Post Your Item here</a></li>
+        </ul>
+    </h3>
+        
+
+    
+    <h5></h5>
+</div>
+<div>
+
+</div>
+@{
+    foreach (var item in Model.Items)
+    {
+        @Html.Partial("ItemSummary", item)
+    }
+}

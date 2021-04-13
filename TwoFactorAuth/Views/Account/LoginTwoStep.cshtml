@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model TwoFactor
+
+@{
+    ViewData["Title"] = "Login Two Step";
+}
+
+<h1 class="bg-info text-white">Login Two Step</h1>
+<div class="text-danger" asp-validation-summary="All"></div>
+
+<p>Enter your authentication code</p>
+
+<form asp-action="LoginTwoStep" method="post">
+    <div class="form-group">
+        <input type="hidden" asp-for="Email" />
+        <label>Code</label>
+        <input asp-for="TwoFactorCode" class="form-control" />
+    </div>
+    <button class="btn btn-primary" type="submit">Log In</button>
+</form>
